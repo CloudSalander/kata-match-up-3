@@ -11,9 +11,10 @@
     <div id="counter">0</div>
     <div id="board">
         <?php
-            define('CARDS',16);
-            for($i = 0; $i < CARDS; ++$i) { 
-              echo '<div class="card" data-flipped="false"></div>';
+            include('classes/Deck.php');
+            $cards = (new Deck()) -> getCards();
+            for($i = 0; $i < count($cards); ++$i) { 
+              echo '<div class="card" data-flipped="false" data-background="'.$cards[$i]->getBackgroundImage().'"></div>';
           } 
         ?>
     </div>
