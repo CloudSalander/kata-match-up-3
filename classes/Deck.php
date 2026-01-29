@@ -12,12 +12,12 @@ class Deck {
     
     public function __construct() {
         for($i = 0; $i < self::N_CARDS; ++$i) {
-            $backgroundImage = self::CARD_BACKGROUNDS[intdiv($i/2)];
+            $backgroundImage = self::CARD_BACKGROUNDS[intdiv($i,2)];
             $this->cards[] = new Card($i+1, $backgroundImage);
         }
     }
 
-    public function getCard(): array {
+    public function getCards(): array {
         return $this->cards;
     }
 }
