@@ -30,7 +30,7 @@ cards.forEach(card => {
     card.dataset.flipped = isFlipped ? "false" : "true";
     card.style.backgroundImage = isFlipped 
       ? "url('assets/naipe.jpg')" 
-      : "url('assets/heraclio.jpeg')";
+      : "url('assets/"+card.dataset.background+"')";
   });
 });
 
