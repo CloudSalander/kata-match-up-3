@@ -15,6 +15,7 @@ class Deck {
             $backgroundImage = self::CARD_BACKGROUNDS[intdiv($i,2)];
             $this->cards[] = new Card($i+1, $backgroundImage);
         }
+        shuffle($this->cards);
     }
 
     public function getCards(): array {
